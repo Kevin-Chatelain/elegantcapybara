@@ -333,6 +333,9 @@ button[type = "submit"]:hover {
 
 /* Page */
 
+.page-content .page-header h1 {
+    margin-right: 40px;
+}
 
 .page-content {
     padding: 50px;
@@ -340,6 +343,7 @@ button[type = "submit"]:hover {
 
 .page-content h1, .page-content h2, .page-content h3, .page-content p, .last-post-container h1, .last-post-container h2, .last-post-container h3, .last-post-container p {
     color: var(--font-color2);
+    flex-shrink: 0;
 }
 
 .page-content .page-header .page-title, .last-post-container .page-header .page-title{
@@ -400,6 +404,25 @@ button[type = "submit"]:hover {
     text-decoration: underline;
 }
 
+.categorie-header {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+/* ACF  */
+
+.credit-livre {
+    margin-top: 50px;
+}
+
+.credit-livre p {
+    font-size: 20px;
+}
+
+.credit-livre p span {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 700px) {
     .header .desktop-menu{
         display: none;
@@ -440,6 +463,10 @@ button[type = "submit"]:hover {
 
     h3 {
         font-size: 17px;
+    }
+
+    footer .top, footer .middle {
+        padding: 20px;
     }
     
     footer .top {

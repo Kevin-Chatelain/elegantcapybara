@@ -22,7 +22,7 @@
     
 
     <div class="bottom">
-        <div class="capy-brand-copyright">
+        <div class="brand-copyright">
             <p>Designed by Kevin &copy; | Powered by Wordpress</p>
         </div>
     </div>

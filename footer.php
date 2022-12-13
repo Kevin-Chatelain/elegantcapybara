@@ -11,7 +11,7 @@
         </div>
 
         <div class="footer-top-right">
-            <?php dynamic_sidebar('footer_right'); ?>
+            <?php wp_nav_menu(array('theme_location' => 'menu_principal')); ?>
         </div>
 
     </div>

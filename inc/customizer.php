@@ -1,30 +1,39 @@
 <?php 
 
-function cd_customizer_settings($wp_customize) {
-    $wp_customize->add_section('cd_colors', array(
-        'title' => 'Couleur',
-        'priority' => 30,
+function theme_customizer_function($wp_customize) {
+    $wp_customize->add_panel('landing_panel', array(
+        'title' => 'Landing Panel',
+        'priority' => 10,
+        'capability' => 'edit_theme_options'
     ));
 
-    $wp_customize->add_setting('background_color', array(
-        'default' => '#ffffff',
-        'transport' => 'refresh',
+    $wp_customize->add_section('landing_page_home', array(
+        'title' => 'Home Section',
+        'description' => __('Home Section Customizer'),
+        'panel' => 'landing_panel'
     ));
 
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'background_color', array(
-        'label' => 'Couleur de fond',
-        'section' => 'cd_colors',
-        'settings' => 'background_color',
-    )));
+    $wp_customize->add_setting('landing_small_header', array(
+        'default' => __('Dernières actualités')
+    ));
 
-    add_action('wp_head', 'cd_customizer_css');
-    function cd_customizer_css() {
-        ?>
-            <style type="text/css">
-                body {background: #<?php echo get_theme_mod('background_color', '#fffffff'); ?>;}
-            </style>
-        <?php
-    }
+    $wp_customize->add_control('landing_small_header', array(
+        'label' => 'Small Heading',
+        'section' => 'landing_page_home',
+        'priority' => 1
+    ));
+
+    $wp_customize->add_setting('landing_textarea', array(
+        'default' => __('Votre texte ici')
+    ));
+
+    $wp_customize->add_control('landing_textarea', array(
+        'label' => 'Description',
+        'section' => 'landing_page_home',
+        'priority' => 2,
+        'type' => 'textarea'
+    ));
 }
 
-add_action('customize_register', 'cd_customizer_settings');
+add_action('customize_register', 'theme_customizer_function');
+

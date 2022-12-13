@@ -9,6 +9,10 @@
                 <div class="barre-title"></div>
             </div>
 
+            <div class="editable-heading">
+                <h2><?php echo get_theme_mod('landing_small_header', 'Dernières actualités'); ?></h2>
+            </div>
+            
             <div class="post-grid">
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 

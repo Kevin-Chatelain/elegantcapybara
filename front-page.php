@@ -2,11 +2,15 @@
 
 <div class="home-content">
         
-
         <div class="last-post-container">
             <div class="page-header">
                 <h1 class="page-title">Accueil</h1>
                 <div class="barre-title"></div>
+            </div>
+
+            <div class="editable-heading">
+                <h2><?php echo get_theme_mod('landing_small_header', 'Dernières actualités'); ?></h2>
+                <p><?php echo get_theme_mod('landing_textarea', 'Votre description'); ?></p>
             </div>
 
             <div class="post-grid">

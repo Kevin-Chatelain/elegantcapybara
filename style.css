@@ -245,9 +245,18 @@ footer .footer-title, .top {
     color: var(--font-color1);
 }
 
+footer .footer-top-right .menu {
+    margin-top: 0;
+}
+
+
 
 
 /* Page Home  */
+
+.editable-heading {
+    margin-bottom: 40px;
+}
 
 .home-content {
     width: 100%;
@@ -266,6 +275,7 @@ footer .footer-title, .top {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 50px;
+    margin-top: 50px;
 }
 
 .post h2 {
